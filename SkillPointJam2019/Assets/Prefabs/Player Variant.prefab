@@ -592,7 +592,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: {fileID: 0}
+            value: {fileID: 2470277718732382159}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -804,6 +804,12 @@ PrefabInstance:
 --- !u!1 &7237749384516116025 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4102187223108340957, guid: 7e3b971f262d1484a8b920dd53d265a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6673282674022830820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2470277718732382159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9139056275567234347, guid: 7e3b971f262d1484a8b920dd53d265a7,
     type: 3}
   m_PrefabInstance: {fileID: 6673282674022830820}
   m_PrefabAsset: {fileID: 0}
