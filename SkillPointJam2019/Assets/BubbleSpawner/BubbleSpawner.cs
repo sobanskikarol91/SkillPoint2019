@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BubbleSpawner : MonoBehaviour
 {
-    public enum Color {Yellow,Green,Red,Blue}
+    public enum Color {Yellow=0,Green=1,Red=2,Blue=3}
     public Color color;
     public GameObject ballPrefab;
     public float spawnProbability = 0.1f;

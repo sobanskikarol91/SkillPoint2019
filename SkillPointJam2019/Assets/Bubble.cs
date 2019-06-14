@@ -17,6 +17,7 @@ public class Bubble : MonoBehaviour
     public void Disappear()
     {
         animator.SetTrigger("Disappear");
+        GetComponentInChildren<Collider2D>().enabled = false;
     }
 
     public void Disappeared()

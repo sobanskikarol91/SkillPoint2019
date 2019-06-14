@@ -103,19 +103,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
-      propertyPath: spawnProbability
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
-        type: 3}
       propertyPath: color
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
-      propertyPath: bubblePrefab
+      propertyPath: ballPrefab
       value: 
-      objectReference: {fileID: 3876075308996387979, guid: db5263b7b27739d40bbd515504f699fc,
+      objectReference: {fileID: 734079700721697362, guid: 95d7ef44c880b6d4e826d8d059b083d9,
+        type: 3}
+    - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: spawnProbability
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80d1a00299c465244ae80ad88db1b59a,
         type: 3}
     - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
@@ -131,6 +137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.21226415
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56987abd48b47644b5ac52fc4c26174, type: 3}
@@ -209,9 +220,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
+      propertyPath: ballPrefab
+      value: 
+      objectReference: {fileID: 734079700721697362, guid: 178389ac97db08d42944f3cfadce5013,
+        type: 3}
+    - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
       propertyPath: spawnProbability
-      value: 0.01
+      value: 0.002
       objectReference: {fileID: 0}
+    - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80d1a00299c465244ae80ad88db1b59a,
+        type: 3}
     - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
       propertyPath: m_Color.r
@@ -226,6 +249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56987abd48b47644b5ac52fc4c26174, type: 3}
@@ -304,19 +332,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
-      propertyPath: spawnProbability
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
-        type: 3}
       propertyPath: color
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
-      propertyPath: bubblePrefab
+      propertyPath: ballPrefab
       value: 
-      objectReference: {fileID: 3876075308996387979, guid: 4733c49fde3f94c479338bea7a9d22e8,
+      objectReference: {fileID: 734079700721697362, guid: 269a13e5b3513194c88b13c4eece574a,
+        type: 3}
+    - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: spawnProbability
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80d1a00299c465244ae80ad88db1b59a,
         type: 3}
     - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
@@ -332,6 +366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.07524917
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56987abd48b47644b5ac52fc4c26174, type: 3}
@@ -410,19 +449,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
-      propertyPath: spawnProbability
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
-        type: 3}
       propertyPath: color
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
-      propertyPath: bubblePrefab
+      propertyPath: ballPrefab
       value: 
-      objectReference: {fileID: 3876075308996387979, guid: fadb99052a90c7d41a0b46df40c90582,
+      objectReference: {fileID: 734079700721697362, guid: 3124cc3a2584e774aa3a05411bb88d12,
+        type: 3}
+    - target: {fileID: 1096926108324098495, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: spawnProbability
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 80d1a00299c465244ae80ad88db1b59a,
         type: 3}
     - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
         type: 3}
@@ -438,6 +483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.118948035
+      objectReference: {fileID: 0}
+    - target: {fileID: 6923767086512015016, guid: c56987abd48b47644b5ac52fc4c26174,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56987abd48b47644b5ac52fc4c26174, type: 3}

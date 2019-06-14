@@ -12,10 +12,9 @@ public class BubbleBall : MonoBehaviour
     {
         //transform.position = Vector2.Lerp(transform.position, endPosition, moveSpeed);
         transform.position = Vector2.MoveTowards(transform.position, endPosition, moveSpeed);
-        Debug.Log(Vector2.Distance(transform.position, endPosition));
         if(Vector2.Distance(transform.position, endPosition) < Mathf.Epsilon)
         {
-            Instantiate(spawnBubble, transform.position, Quaternion.identity);
+            Instantiate(spawnBubble, transform.position, Quaternion.Euler(0,0,Random.value*360));
             Destroy(this.gameObject);
         }
     }

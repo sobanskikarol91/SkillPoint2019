@@ -540,7 +540,12 @@ PrefabInstance:
     - target: {fileID: 23790399887809605, guid: 7e3b971f262d1484a8b920dd53d265a7,
         type: 3}
       propertyPath: m_ForceMagnitude
-      value: 200
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090682491354340127, guid: 7e3b971f262d1484a8b920dd53d265a7,
+        type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3b971f262d1484a8b920dd53d265a7, type: 3}
