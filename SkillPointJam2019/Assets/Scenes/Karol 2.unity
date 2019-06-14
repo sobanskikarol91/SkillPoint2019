@@ -475,6 +475,21 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 8109456373631508550, guid: aee164ba24cada4489d202c34029938d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.23049559
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109456373631508550, guid: aee164ba24cada4489d202c34029938d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.043253824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109456373631508550, guid: aee164ba24cada4489d202c34029938d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.33962262
+      objectReference: {fileID: 0}
     - target: {fileID: 8109456373631508549, guid: aee164ba24cada4489d202c34029938d,
         type: 3}
       propertyPath: m_IsTrigger
