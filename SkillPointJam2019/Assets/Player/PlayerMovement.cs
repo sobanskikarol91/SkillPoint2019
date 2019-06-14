@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [Range(0.0f, 1.0f)] public float rotationSpeed = 1.0f;
     public bool moveToDirection = true;
     public bool rotateToDirection = true;
+    public bool rotateToSkillDirection = false;
+    bool rotateSkillDirectionLastFrame = true;
+    Vector2 directionInputRemembered;
     Rigidbody2D rb;
     InputManager input;
 
@@ -22,7 +25,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if(moveToDirection && input.atMove)
             rb.AddForce(input.positionInput * movementSpeed);
-        if(rotateToDirection)
-            rb.rotation = Mathf.LerpAngle(rb.rotation, Vector2.SignedAngle(Vector2.up, input.positionInput), rotationSpeed);
+        if (rotateToDirection)
+        {
+
+            if (rotateToSkillDirection )
+            {
+                if(!rotateSkillDirectionLastFrame)
+                    directionInputRemembered = input.directionInput;
+
+                input.positionInput = directionInputRemembered;
+            }
+
+            rb.rotation = Mathf.LerpAngle(rb.rotation, 
+                Vector2.SignedAngle(Vector2.up, rotateToSkillDirection ? directionInputRemembered : input.positionInput), 
+                rotationSpeed);
+
+        }
+
+        rotateSkillDirectionLastFrame = rotateToSkillDirection;
     }
 }
