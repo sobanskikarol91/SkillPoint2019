@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        playerSpawner = GetComponent<PlayerSpawner>();
         instance = this;
     }
 
