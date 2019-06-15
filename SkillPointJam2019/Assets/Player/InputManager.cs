@@ -15,7 +15,12 @@ public class InputManager : MonoBehaviour
     [System.NonSerialized] public Vector2 directionInput;
     [System.NonSerialized] public bool atAim;
 
-    [System.NonSerialized] public bool[] keyPressed = new bool[2];
+    [System.NonSerialized] public bool[] keyPressed;
+
+    private void Start()
+    {
+        keyPressed = new bool[keyInputNames.Length];
+    }
 
     private void Update()
     {
