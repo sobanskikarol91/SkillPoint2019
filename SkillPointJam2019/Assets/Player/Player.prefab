@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11d3076ac9e8e64e8d673888772b365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerId: -1
   keyInputNames:
   - Fire1
   - Fire2
@@ -265,6 +266,8 @@ MonoBehaviour:
   - TakeCryon
   xAxisCode: Horizontal
   yAxisCode: Vertical
+  xAxisDirCode: Horizontal_Dir
+  yAxisDirCode: Vertical_Dir
   minimalPositionInputStrength: 0.1
   minimalDirectionInputStrength: 0.1
 --- !u!50 &4102187223108340929
@@ -301,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 100
-  rotationSpeed: 0.175
+  rotationSpeed: 0.35
   moveToDirection: 1
   rotateToDirection: 1
   rotateToSkillDirection: 0
