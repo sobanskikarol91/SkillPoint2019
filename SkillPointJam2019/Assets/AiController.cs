@@ -9,20 +9,35 @@ public class AiController : MonoBehaviour
     #region RandomMovement
     public float tMinFollowDir;
     public float tMaxFollowDir;
-    public float arenaRadius;
     Timer tFollowDir = new Timer();
 
+    public float arenaRadius;
+    public float closeRadius;
+    public float movementSpeed;
+    
     Vector2 movementAim;
     #endregion RandomMovement
     // Start is called before the first frame update
     void Start()
     {
         tFollowDir.cd = Random.Range(tMinFollowDir, tMaxFollowDir);
+        movementAim = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        movementAim = arenaPosition +Random.insideUnitCircle*arenaPosition;
+        if (tFollowDir.IsReadyRestart())
+        {
+            movementAim = arenaPosition + Random.insideUnitCircle * arenaPosition;
+            tFollowDir.cd = Random.Range(tMinFollowDir, tMaxFollowDir);
+        }
+
+        Vector2 toAim = (Vector2)transform.position - movementAim;
+        if(toAim.sqrMagnitude > closeRadius*closeRadius)
+        {
+
+        }
+
     }
 }
