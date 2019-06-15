@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 2
-  lifeTime: 3
+  lifeTime: 8
 --- !u!95 &8093591573893609389
 Animator:
   serializedVersion: 3
@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 2381397777824862788}
   - component: {fileID: 4683794912158559250}
   - component: {fileID: 5896797752145181009}
+  - component: {fileID: 1883639216387281348}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Bubble
@@ -163,6 +164,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.99
+--- !u!114 &1883639216387281348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8896743047659098141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed2b1979b7499c488299192ac49b4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 4391279417915722029, guid: a2547b0625302be46b385d273dbb0e6b,
+    type: 3}
 --- !u!1001 &7929882170988446215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,10 +257,6 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.078431375
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.909804
@@ -257,6 +268,10 @@ PrefabInstance:
     - target: {fileID: 19800000, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.078431375
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800004, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r

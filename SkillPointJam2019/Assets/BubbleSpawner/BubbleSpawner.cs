@@ -6,28 +6,28 @@ public class BubbleSpawner : MonoBehaviour
 {
     public enum Color {Yellow=0,Green=1,Red=2,Blue=3}
     public Color color;
-    public GameObject ballPrefab;
-    public float spawnProbability = 0.1f;
-    public static float areaDiameter = 17f;
+    public GameObject[] ballPrefabs;
+    public Transform spawnPosition;
 
     private AudioSource audioSource;
 
     private void Awake()
     {
-      audioSource =  GetComponent<AudioSource>();
+        audioSource =  GetComponent<AudioSource>();
+        color = transform.root.GetComponent<Cryon>().cryonColor;
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Random.value < spawnProbability)
-            Spawn();
+        Spawn();
     }
 
     private void Spawn()
     {
         audioSource.Play();
-        Vector2 hitPosition = Random.insideUnitCircle * areaDiameter;
-        GameObject spawned = Instantiate(ballPrefab, transform.position, Quaternion.identity, transform.parent);
+        Vector2 hitPosition = Random.insideUnitCircle * 5f + (Vector2)spawnPosition.position;
+        GameObject spawned = Instantiate(ballPrefabs[(int)color], transform.position, Quaternion.identity, null);
         spawned.GetComponent<BubbleBall>().endPosition = hitPosition;
+        Debug.Log(transform.parent.name);
     }
 }
