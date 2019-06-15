@@ -6,7 +6,8 @@ public class HitExplosion : MonoBehaviour
 {
     AreaEffector2D effector;
     BubbleSpawner.Color cryonColor;
-    public GameObject explosion;
+    public GameObject explosionEffect;
+    public GameObject hitEffect;
 
     void Start()
     {
@@ -19,12 +20,14 @@ public class HitExplosion : MonoBehaviour
         if (collision.GetComponent<InputManager>() == null)
             return;
         Shield enemyShield = transform.root.GetComponent<Shield>();
+        Vector2 collisionPoint = (collision.gameObject.transform.root.position + transform.root.position) / 2;
         if (enemyShield.shieldColor == cryonColor && !enemyShield.IsBlocking)
         {
-            Vector2 collisionPoint = (collision.gameObject.transform.root.position + transform.root.position) / 2;
-            //Vector2 collisionPoint = collision.gameObject.transform.root.position;
-            Instantiate(explosion, collisionPoint, Quaternion.identity);
-            
+            Instantiate(explosionEffect, collisionPoint, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(hitEffect, collisionPoint, Quaternion.identity);
         }
     }
 }

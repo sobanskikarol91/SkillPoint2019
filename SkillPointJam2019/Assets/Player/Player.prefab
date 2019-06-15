@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 5334689458587915505}
   - component: {fileID: 8634937535836519381}
   - component: {fileID: 8016687443810762500}
+  - component: {fileID: 76953349}
   m_Layer: 0
   m_Name: Dash
   m_TagString: Untagged
@@ -199,6 +200,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 11}
   m_EdgeRadius: 0
+--- !u!114 &76953349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553920910734285732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee619e7e12594644eaf35465ae910fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 4391279417915722029, guid: a2547b0625302be46b385d273dbb0e6b,
+    type: 3}
+  hitEffect: {fileID: 2376629184854220809, guid: 87940113e92001c4a92e7dddb1813ba7,
+    type: 3}
 --- !u!1 &4102187223108340957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2201,7 @@ GameObject:
   - component: {fileID: 6269459656687306503}
   - component: {fileID: 5948050733040049373}
   - component: {fileID: 23790399887809605}
+  - component: {fileID: 1997272926}
   m_Layer: 0
   m_Name: Slash
   m_TagString: Untagged
@@ -2251,6 +2269,22 @@ AreaEffector2D:
   m_ForceTarget: 0
   m_Drag: 0
   m_AngularDrag: 0
+--- !u!114 &1997272926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4612891079640518893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee619e7e12594644eaf35465ae910fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 4391279417915722029, guid: a2547b0625302be46b385d273dbb0e6b,
+    type: 3}
+  hitEffect: {fileID: 2376629184854220809, guid: 87940113e92001c4a92e7dddb1813ba7,
+    type: 3}
 --- !u!1 &6018488060012765015
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,7 +2489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee619e7e12594644eaf35465ae910fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 4391279417915722029, guid: a2547b0625302be46b385d273dbb0e6b,
+  explosionEffect: {fileID: 4391279417915722029, guid: a2547b0625302be46b385d273dbb0e6b,
+    type: 3}
+  hitEffect: {fileID: 2376629184854220809, guid: 87940113e92001c4a92e7dddb1813ba7,
     type: 3}
 --- !u!1 &7846479555396990398
 GameObject:
