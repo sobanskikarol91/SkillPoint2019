@@ -11,11 +11,12 @@ public class SnakeMovement : MonoBehaviour
     float timeLeftToChangeDirection;
     float timeToGainDirection = 10;
     public Transform[] nodes;
-    public float maxDist = 2;
     private Vector2 currentDirection;
     private Vector2 targetDirection;
     private bool isLerping = true;
     private float timeStartedLerping;
+
+    float mindistance = 10f;
 
     private void Awake()
     {
@@ -57,19 +58,28 @@ public class SnakeMovement : MonoBehaviour
         timeLeftToChangeDirection = 2;
         //timeLeftToChangeDirection = UnityEngine.Random.Range(minTimeToChangeDirection, maxTimeToChangeDirection);
     }
- 
+
     void MoveNodes()
     {
+        Transform currentPart, previousPart;
+
         for (int i = 1; i < nodes.Length; i++)
         {
-            Vector2 direction = nodes[i - 1].position - nodes[i].position;
-            if (direction.sqrMagnitude > maxDist * maxDist)
-            {
-                nodes[i].position = (Vector2)nodes[i].position + direction.normalized * maxDist * Time.deltaTime;
-            }
-            else
-                //nodes[i].Translate(direction * Time.deltaTime);
-                nodes[i].position = (Vector2)nodes[i].position + direction * Time.deltaTime;
+            currentPart = nodes[i];
+            previousPart = nodes[i - 1];
+
+            float dis = Vector2.Distance(previousPart.position, currentPart.position);
+
+            Vector2 newPos = previousPart.position;
+            newPos.y = nodes[0].position.y;
+
+            float T = Time.deltaTime * dis / mindistance * speed;
+
+            if (T > 1f)
+                T = 1f;
+
+            currentPart.position = Vector3.Slerp(currentPart.position, newPos, T);
+            currentPart.rotation = Quaternion.Slerp(currentPart.rotation, previousPart.rotation, T);
         }
     }
 
@@ -78,7 +88,6 @@ public class SnakeMovement : MonoBehaviour
         targetDirection = UnityEngine.Random.insideUnitCircle;
         Debug.Log("New Target Direction:" + targetDirection);
     }
-
 
     void StartLerp()
     {
@@ -93,11 +102,22 @@ public class SnakeMovement : MonoBehaviour
 
         Vector2 previousDirection = currentDirection;
         currentDirection = Vector3.Lerp(currentDirection, targetDirection, percentageComplete);
-        // nodes[0].rotation = Quaternion.Euler(new Vector3(0, 0, Vector2.Angle(currentDirection, currentDirection -previousDirection)));
+        Vector2 currentRotation = nodes[0].eulerAngles;
+        currentRotation += (previousDirection - currentRotation);
+        nodes[0].rotation = Quaternion.Euler(currentRotation);
 
-        // currentDirection.Normalize();
+        currentDirection.Normalize();
 
         if (percentageComplete >= 1)
             isLerping = false;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "SnakeBoundry")
+        {
+            Debug.Log("Boundry snake");
+            currentDirection *= -1;
+        }
     }
 }
