@@ -11,7 +11,7 @@ public class PlayerAtack : MonoBehaviour
     Shield playerShield;
     Cryon playerCryon;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -20,7 +20,7 @@ public class PlayerAtack : MonoBehaviour
         playerCryon = GetComponent<Cryon>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         for (int i = 0; i < skillTags.Length; ++i)

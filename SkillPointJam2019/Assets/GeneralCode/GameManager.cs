@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public PlayerHealth[] players;
     public static GameManager instance;
 
-    public PlayerSpawner playerSpawner;
+    private PlayerSpawner playerSpawner;
 
 
     private void Awake()
@@ -28,6 +28,6 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        
+
     }
 }

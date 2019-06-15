@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public bool moveToDirection = true;
     public bool rotateToDirection = true;
     public bool rotateToSkillDirection = false;
+    public AudioSource footSteep;
+
     bool rotateSkillDirectionLastFrame = true;
     Vector2 directionInputRemembered;
     Rigidbody2D rb;
@@ -23,25 +25,33 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(moveToDirection && input.atMove)
-            rb.AddForce(input.positionInput * movementSpeed);
+        if (moveToDirection && input.atMove)
+            MovePlayer();
         if (rotateToDirection)
         {
 
-            if (rotateToSkillDirection )
+            if (rotateToSkillDirection)
             {
-                if(!rotateSkillDirectionLastFrame)
+                if (!rotateSkillDirectionLastFrame)
                     directionInputRemembered = input.directionInput;
 
                 input.positionInput = directionInputRemembered;
             }
 
-            rb.rotation = Mathf.LerpAngle(rb.rotation, 
-                Vector2.SignedAngle(Vector2.up, rotateToSkillDirection ? directionInputRemembered : input.positionInput), 
+            rb.rotation = Mathf.LerpAngle(rb.rotation,
+                Vector2.SignedAngle(Vector2.up, rotateToSkillDirection ? directionInputRemembered : input.positionInput),
                 rotationSpeed);
 
         }
 
         rotateSkillDirectionLastFrame = rotateToSkillDirection;
+    }
+
+    private void MovePlayer()
+    {
+        if (!footSteep.isPlaying)
+            footSteep.Play();
+
+        rb.AddForce(input.positionInput * movementSpeed);
     }
 }

@@ -10,6 +10,8 @@ public class Shield : MonoBehaviour
     public SpriteRenderer playerShield;
     public Sprite[] shieldSprites;
 
+    [SerializeField] AudioClip useSnd;
+
     public void Start()
     {
         input = GetComponent<InputManager>();
@@ -23,6 +25,9 @@ public class Shield : MonoBehaviour
 
     public void ShieldUsed()
     {
+        Debug.Log("use shield");
+        AudioSource.PlayClipAtPoint(useSnd, transform.position);
+
         usageCount--;
         if (usageCount < 1)
             playerShield.sprite = null;
@@ -30,7 +35,7 @@ public class Shield : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Bubble" && input.keyPressed[4])
+        if (collision.tag == "Bubble" && input.keyPressed[4])
         {
             BubbleSpawner.Color color = collision.gameObject.GetComponentInParent<Bubble>().color;
             collision.gameObject.GetComponentInParent<Bubble>().Disappear();

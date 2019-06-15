@@ -6,7 +6,6 @@ using System.Linq;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth;
-    public GameObject deathEffect;
 
     private int currentHealth;
     private Collider collider;
@@ -15,22 +14,21 @@ public class PlayerHealth : MonoBehaviour
 
     private void Awake()
     {
+        currentHealth = maxHealth;
         fsm = GetComponent<PlayMakerFSM>();
-        collider = GetComponent<Collider>();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("death");
         if (collision.name == "Arena")
             Death();
     }
 
     void Death()
     {
+        fsm.SendEvent("Death");
         GameManager.instance.Death(this);
         currentHealth--;
-        Instantiate(deathEffect, transform);
     }
 
     public bool IsDeath()
