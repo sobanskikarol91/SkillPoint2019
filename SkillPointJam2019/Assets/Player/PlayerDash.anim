@@ -360,7 +360,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: model/rightArm/red_crayon/Dash
+    path: model/rightArm/crayon/Dash
     classID: 61
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -435,7 +435,7 @@ AnimationClip:
       customType: 24
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2242565038
+      path: 1644330824
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 61
@@ -1281,7 +1281,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: model/rightArm/red_crayon/Dash
+    path: model/rightArm/crayon/Dash
     classID: 61
     script: {fileID: 0}
   m_EulerEditorCurves:
