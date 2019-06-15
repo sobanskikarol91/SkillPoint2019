@@ -467,9 +467,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
+    attribute: m_IsActive
     path: model/rightArm/crayon/Slash
-    classID: 61
+    classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -544,9 +544,9 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 2133910257
-      attribute: 3305885265
+      attribute: 2086281974
       script: {fileID: 0}
-      typeID: 61
+      typeID: 1
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []
@@ -1658,9 +1658,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
+    attribute: m_IsActive
     path: model/rightArm/crayon/Slash
-    classID: 61
+    classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:
