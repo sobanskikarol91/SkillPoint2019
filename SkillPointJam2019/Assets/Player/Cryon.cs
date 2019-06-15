@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cryon : MonoBehaviour
 {
+    public BubbleSpawner.Color cryonColor;
     public int usageCount = 3;
     InputManager input;
     public SpriteRenderer playerCryon;
@@ -12,10 +13,16 @@ public class Cryon : MonoBehaviour
     public void Start()
     {
         input = GetComponent<InputManager>();
+        for (int i = 0; i < cryonSprites.Length; i++)
+        {
+            if (playerCryon.sprite == cryonSprites[i])
+                cryonColor = (BubbleSpawner.Color)i;
+        }
     }
 
     void CryonTaken(BubbleSpawner.Color color)
     {
+        cryonColor = color;
         playerCryon.sprite = cryonSprites[(int)color];
         usageCount = 3;
     }
