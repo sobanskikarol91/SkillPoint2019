@@ -34,7 +34,6 @@ public class Shield : MonoBehaviour
         AudioSource.PlayClipAtPoint(useSnd, transform.position);
 
         IsBlocking = false;
-        usageCount--;
         if (usageCount < 1)
             playerShield.sprite = null;
     }
