@@ -15,7 +15,8 @@ public class PlayerSpawner : MonoBehaviour
         {
             Vector2 position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
             GameObject player = Instantiate(playerPrefab, position, Quaternion.identity);
-            player.GetComponent<InputManager>().playerId = i;
+            player.GetComponent<InputManager>().playerId = i+1;
+            Camera.main.GetComponent<MultiCameraController>().targets.Add(player.transform);
 
             Shield shield = player.GetComponent<Shield>();
             shield.shieldColor = (BubbleSpawner.Color)i;
