@@ -19,7 +19,7 @@ public class HitExplosion : MonoBehaviour
         if (collision.GetComponent<InputManager>() == null)
             return;
         Shield enemyShield = transform.root.GetComponent<Shield>();
-        if (enemyShield.shieldColor == cryonColor && enemyShield.IsBlocking)
+        if (enemyShield.shieldColor == cryonColor && !enemyShield.IsBlocking)
         {
             Vector2 collisionPoint = (collision.gameObject.transform.root.position + transform.root.position) / 2;
             //Vector2 collisionPoint = collision.gameObject.transform.root.position;
