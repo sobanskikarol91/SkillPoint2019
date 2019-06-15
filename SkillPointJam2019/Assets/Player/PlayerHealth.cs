@@ -18,16 +18,8 @@ public class PlayerHealth : MonoBehaviour
         fsm = GetComponent<PlayMakerFSM>();
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Arena")
-        {
-            Debug.Log("fsdfdsa");
-            Death();
-        }
-    }
 
-    void Death()
+    public void Death()
     {
         fsm.SendEvent("Death");
         GameManager.instance.Death(this);
@@ -37,10 +29,5 @@ public class PlayerHealth : MonoBehaviour
     public bool IsDeath()
     {
         return currentHealth == 0;
-    }
-
-    public void TurnOnGodMode()
-    {
-        fsm.SendEvent("GodMode");
     }
 }
