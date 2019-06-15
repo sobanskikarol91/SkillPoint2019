@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
+    public BubbleSpawner.Color shieldColor;
     public int usageCount = 3;
     public bool IsBlocking;
     InputManager input;
@@ -15,10 +16,16 @@ public class Shield : MonoBehaviour
     public void Start()
     {
         input = GetComponent<InputManager>();
+        for (int i = 0; i < shieldSprites.Length; i++)
+        {
+            if (playerShield.sprite == shieldSprites[i])
+                shieldColor = (BubbleSpawner.Color)i;
+        }
     }
 
     void ShieldTaken(BubbleSpawner.Color color)
     {
+        shieldColor = color;
         playerShield.sprite = shieldSprites[(int)color];
         usageCount = 3;
     }

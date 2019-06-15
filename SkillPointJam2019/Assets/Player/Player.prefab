@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b47ee75cc3fd934c9f2ea99cdf69ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cryonColor: 0
   usageCount: 3
   playerCryon: {fileID: 7448578227377478237}
   cryonSprites:
@@ -392,6 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29851f63b2440e4cad18c197e5adc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shieldColor: 0
   usageCount: 3
   IsBlocking: 0
   playerShield: {fileID: 2846610774058853579}
@@ -2373,6 +2375,7 @@ GameObject:
   - component: {fileID: 438697931226955833}
   - component: {fileID: 5090682491354340127}
   - component: {fileID: 4274009742034405548}
+  - component: {fileID: 225494293429302799}
   m_Layer: 0
   m_Name: Push
   m_TagString: Untagged
@@ -2440,6 +2443,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 11}
   m_EdgeRadius: 0
+--- !u!114 &225494293429302799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219720179684718304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee619e7e12594644eaf35465ae910fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 4391279417915722029, guid: a2547b0625302be46b385d273dbb0e6b,
+    type: 3}
 --- !u!1 &7846479555396990398
 GameObject:
   m_ObjectHideFlags: 0
