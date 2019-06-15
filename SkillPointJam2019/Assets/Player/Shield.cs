@@ -23,11 +23,17 @@ public class Shield : MonoBehaviour
         usageCount = 3;
     }
 
+    public void ShieldUse()
+    {
+        IsBlocking = true;
+        usageCount--;
+    }
+
     public void ShieldUsed()
     {
-        Debug.Log("use shield");
         AudioSource.PlayClipAtPoint(useSnd, transform.position);
 
+        IsBlocking = false;
         usageCount--;
         if (usageCount < 1)
             playerShield.sprite = null;
