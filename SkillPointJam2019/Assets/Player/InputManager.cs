@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] int playerId = -1;
+    [SerializeField] public int playerId = -1;
     string GetPadSuffix() { return playerId == -1 ? "" : "_Pad" + playerId; }
 
     [SerializeField] string[] keyInputNames = new string[] { "Fire1", "Fire2" };
