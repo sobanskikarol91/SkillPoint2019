@@ -96,3 +96,4 @@ MonoBehaviour:
   moveSpeed: 1
   spawnBubble: {fileID: 3876075308996387979, guid: d5c133548837a4649b8c1bc9ffc8af0e,
     type: 3}
+  hitClip: {fileID: 8300000, guid: e4532bed8e288e0498cb832d097f3b26, type: 3}
