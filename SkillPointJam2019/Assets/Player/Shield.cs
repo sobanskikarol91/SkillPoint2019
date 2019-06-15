@@ -16,24 +16,25 @@ public class Shield : MonoBehaviour
     public void Start()
     {
         input = GetComponent<InputManager>();
-        for (int i = 0; i < shieldSprites.Length; i++)
-        {
-            if (playerShield.sprite == shieldSprites[i])
-                shieldColor = (BubbleSpawner.Color)i;
-        }
+        //playerShield.sprite = shieldSprites[(int)shieldColor];
+        //for (int i = 0; i < shieldSprites.Length; i++)
+        //{
+        //    if (playerShield.sprite == shieldSprites[i])
+        //        shieldColor = (BubbleSpawner.Color)i;
+        //}
     }
 
     void ShieldTaken(BubbleSpawner.Color color)
     {
-        shieldColor = color;
-        playerShield.sprite = shieldSprites[(int)color];
-        usageCount = 3;
+        //shieldColor = color;
+        //playerShield.sprite = shieldSprites[(int)color];
+        //usageCount = 3;
     }
 
     public void ShieldUse()
     {
         IsBlocking = true;
-        usageCount--;
+        //usageCount--;
     }
 
     public void ShieldUsed()
@@ -41,8 +42,8 @@ public class Shield : MonoBehaviour
         AudioSource.PlayClipAtPoint(useSnd, transform.position);
 
         IsBlocking = false;
-        if (usageCount < 1)
-            playerShield.sprite = null;
+        //if (usageCount < 1)
+        //    playerShield.sprite = null;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
