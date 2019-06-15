@@ -11,7 +11,7 @@ public class SnakeMovement : MonoBehaviour
     float timeLeftToChangeDirection;
     float timeToGainDirection = 10;
     public Transform[] nodes;
-
+    public float maxDist = 2;
     private Vector2 currentDirection;
     private Vector2 targetDirection;
     private bool isLerping = true;
@@ -35,9 +35,8 @@ public class SnakeMovement : MonoBehaviour
 
     private void Move()
     {
-        Debug.Log("CD" + currentDirection);
         nodes[0].Translate((Vector3)currentDirection * speed * Time.deltaTime);
-        //MoveNodes();
+        MoveNodes();
     }
 
     private void CheckTimeToChangeDirection()
@@ -58,12 +57,19 @@ public class SnakeMovement : MonoBehaviour
         timeLeftToChangeDirection = 2;
         //timeLeftToChangeDirection = UnityEngine.Random.Range(minTimeToChangeDirection, maxTimeToChangeDirection);
     }
-
+ 
     void MoveNodes()
     {
-        for (int i = 1; i < nodes.Length - 1; i++)
+        for (int i = 1; i < nodes.Length; i++)
         {
-            // nodes[i].position = nodes[i-1].
+            Vector2 direction = nodes[i - 1].position - nodes[i].position;
+            if (direction.sqrMagnitude > maxDist * maxDist)
+            {
+                nodes[i].position = (Vector2)nodes[i].position + direction.normalized * maxDist * Time.deltaTime;
+            }
+            else
+                //nodes[i].Translate(direction * Time.deltaTime);
+                nodes[i].position = (Vector2)nodes[i].position + direction * Time.deltaTime;
         }
     }
 
@@ -85,10 +91,11 @@ public class SnakeMovement : MonoBehaviour
         float timeSinceStarted = Time.time - timeStartedLerping;
         float percentageComplete = timeSinceStarted / timeToGainDirection;
 
+        Vector2 previousDirection = currentDirection;
         currentDirection = Vector3.Lerp(currentDirection, targetDirection, percentageComplete);
-        transform.rotation =
+        // nodes[0].rotation = Quaternion.Euler(new Vector3(0, 0, Vector2.Angle(currentDirection, currentDirection -previousDirection)));
 
-       // currentDirection.Normalize();
+        // currentDirection.Normalize();
 
         if (percentageComplete >= 1)
             isLerping = false;
