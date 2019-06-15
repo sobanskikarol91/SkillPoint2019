@@ -20,8 +20,11 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.name == "Arena")
+        if (collision.gameObject.name == "Arena")
+        {
+            Debug.Log("fsdfdsa");
             Death();
+        }
     }
 
     void Death()
