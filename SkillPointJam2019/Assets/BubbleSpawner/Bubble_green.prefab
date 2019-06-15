@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 1
-  lifeTime: 3
+  lifeTime: 20
 --- !u!95 &8093591573893609389
 Animator:
   serializedVersion: 3
@@ -242,10 +242,6 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.10980393
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.40000004
@@ -257,6 +253,10 @@ PrefabInstance:
     - target: {fileID: 19800000, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.10980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800004, guid: 58b66a524c29d3447a6b7902227307bf, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
